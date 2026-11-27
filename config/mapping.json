@@ -1,0 +1,67 @@
+{
+  "_readme": "Maps Zoho Books accounts to dashboard groups. Matching is by account name (case-insensitive) against the account itself and then each parent going up the tree; the nearest match wins. So any new sub-account added under a listed account rolls into that group automatically. An expense account that matches nothing lands in 'misc' and is listed in the data-quality panel.",
+
+  "fiscalYearStartMonth": 4,
+
+  "bankAccounts": ["HDFC BANK --- 76521"],
+  "founderCardAccounts": ["SAHIL PURI"],
+  "founderCapitalAccounts": ["Owner's Equity"],
+
+  "revenue": {
+    "programme": { "label": "Programme revenue", "accounts": ["Unearned Revenue", "Sales"] },
+    "workshop": { "label": "Workshop revenue", "accounts": ["General Income"] },
+    "other": { "label": "Other income", "accounts": [] }
+  },
+
+  "taxAccounts": ["Tax Paid Expense"],
+  "gst": {
+    "outputAccounts": ["GST Payable"],
+    "inputAccounts": ["Input Tax Credits", "Reverse Charge Tax Input but not due"]
+  },
+
+  "groups": [
+    { "id": "google_workspace", "label": "Google Workspace", "type": "fixed", "accounts": ["GOOGLE WORKSPACE"] },
+    { "id": "tech_subscriptions", "label": "AI & Tech Subscriptions", "type": "fixed", "accounts": ["AI Automation"] },
+    { "id": "website", "label": "Website", "type": "fixed", "accounts": ["Website"] },
+    { "id": "law_firms", "label": "Law Firms", "type": "fixed", "accounts": ["Legal Service"] },
+    { "id": "clickup", "label": "ClickUp Costs", "type": "fixed", "accounts": ["CLICK UP 1"] },
+    { "id": "workshop_costs", "label": "Workshop Costs", "type": "fixed", "accounts": ["Workshop Cost"], "tags": ["cogs"] },
+    { "id": "wework", "label": "Office Space Rental (WeWork)", "type": "fixed", "accounts": ["We Work"] },
+    { "id": "myhq", "label": "Virtual Office (My HQ)", "type": "fixed", "accounts": ["MY HQ"] },
+    { "id": "freelancer_ca", "label": "Freelancer CA", "type": "fixed", "accounts": ["Freelancer CA"] },
+
+    { "id": "emp_founder", "label": "In-House: Founder", "type": "fixed", "team": "Founder", "accounts": ["Founder"] },
+    { "id": "emp_product", "label": "In-House: Product", "type": "fixed", "team": "Product", "accounts": ["Salaries - Product"] },
+    { "id": "emp_gtm", "label": "In-House: GTM & Marketing", "type": "fixed", "team": "GTM & Marketing", "accounts": ["Salaries - GTM"], "tags": ["true_cac"] },
+    { "id": "emp_service", "label": "In-House: Service", "type": "fixed", "team": "In-House Service", "accounts": ["Devina Neema", "Neera Handa"], "tags": ["cogs"] },
+    { "id": "emp_strategy", "label": "In-House: Strategy", "type": "fixed", "team": "Strategy", "accounts": ["Salaries - Strategy"] },
+
+    { "id": "out_service", "label": "Outsourced: Service Team", "type": "variable", "accounts": ["Salaries - Service"], "tags": ["cogs"] },
+    { "id": "out_marketing", "label": "Outsourced: Marketing & Ads Team", "type": "variable", "accounts": ["Salaries - Marketing"], "tags": ["true_cac"] },
+    { "id": "meta_ads", "label": "Meta Ads Costs", "type": "variable", "accounts": ["META"], "tags": ["cac", "ad_spend"] },
+    { "id": "podcast_shoot", "label": "Podcast Shoot Costs", "type": "variable", "accounts": [] },
+    { "id": "athena", "label": "Athena Labs (Mindset Coaching)", "type": "variable", "accounts": ["Athena Labs (Mindset Coaching Org)"], "tags": ["cogs"] },
+    { "id": "influencer", "label": "Influencer, Sponsorships, Advertisement", "type": "variable", "accounts": ["Influencer , Sponserships, Advertisement"], "tags": ["cac"] },
+    { "id": "nutritionist", "label": "Freelancer Nutritionist", "type": "variable", "accounts": ["Freelancer Nutritionist"], "tags": ["cogs"] },
+    { "id": "fitness", "label": "Freelancer Fitness Trainer", "type": "variable", "accounts": ["Freelancer Fitness Trainer"], "tags": ["cogs"] },
+    { "id": "event_venue", "label": "Event Venue Payments (Quorum)", "type": "variable", "accounts": ["Quorum"] },
+    { "id": "tutor", "label": "Tutor's Payment", "type": "variable", "accounts": ["Tutor's Payment"], "tags": ["cogs"] },
+    { "id": "printing", "label": "Printing Expense", "type": "variable", "accounts": ["Printing Expense"] },
+    { "id": "shooting", "label": "Shooting & Editors", "type": "variable", "accounts": ["Shooting & Editors"] },
+    { "id": "podcast_studio", "label": "Podcast Studio Charges", "type": "variable", "accounts": ["Podcasts & Studio Charges"] },
+    { "id": "food", "label": "Food Expenses", "type": "variable", "accounts": ["Food Expenses"] },
+    { "id": "mindler", "label": "Personality Test for Students (Mindler)", "type": "variable", "accounts": ["Personality test"], "tags": ["cogs"] },
+    { "id": "merchandise", "label": "Merchandise Purchases", "type": "variable", "accounts": [] },
+    { "id": "workshop_speakers", "label": "Workshop Speakers Payments", "type": "variable", "accounts": ["workshop Speaker"], "tags": ["cogs"] },
+    { "id": "projects", "label": "Alcovian Projects Expenses", "type": "variable", "accounts": [], "tags": ["cogs"] },
+    { "id": "contingency", "label": "Contingency Reserve (Unforeseen Expenses)", "type": "variable", "accounts": [] },
+    { "id": "misc", "label": "Other Miscellaneous Expenses", "type": "variable", "accounts": [], "catchAll": true }
+  ],
+
+  "tagMeaning": {
+    "cogs": "Service delivery cost (= cost of goods sold)",
+    "cac": "Sales & marketing spend used in plain CAC",
+    "true_cac": "Marketing team salaries and agencies added on top of CAC to get True CAC",
+    "ad_spend": "Ad spend recorded in Zoho (used for Marketing spend and ROAS when the Meta Ads API is not connected)"
+  }
+}

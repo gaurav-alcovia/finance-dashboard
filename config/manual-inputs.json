@@ -1,0 +1,16 @@
+{
+  "_readme": "Numbers that come from sources not yet connected (Service Dashboard / Nurture Database, ClickUp CRM, Meta Ads). Add one entry per month, keyed YYYY-MM. Leave a field out (or null) and the KPI shows 'Not connected'. Every field is optional.",
+  "_fields": {
+    "uniqueAlcovians": "Unique active Alcovians that month (Service Dashboard). Used for MRR per Alcovian.",
+    "trialsEligible": "3-month trial Alcovians in the cohort being measured.",
+    "trialsConverted": "Of those, how many converted to the 1-year programme.",
+    "renewalsEligible": "Last year's Alcovians due for renewal.",
+    "renewalsDone": "Of those, how many renewed.",
+    "workshopAttendees": "Total workshop attendees.",
+    "workshopConverted": "Workshop attendees who became Alcovians.",
+    "newCustomers": "New customers acquired (CRM). If omitted, the dashboard counts customers whose first payment in Zoho falls in the month.",
+    "adAttributedRevenue": "Revenue from leads whose ClickUp lead source is ads. Used for ROAS.",
+    "metaAdSpend": "Meta Ads spend for the month, only if you want to override Zoho / the Meta API."
+  },
+  "months": {}
+}

@@ -1,0 +1,30 @@
+{
+  "_readme": "Snapshot of the AOP sheet 'Alcovia 2027 AOP | For Product Reference' (Sheet1), taken 27 Nov 2026. Used as the benchmark from benchmarkFrom onwards. If AOP_SHEET_CSV_URL is set, the live sheet replaces this snapshot on every sync.",
+  "sheetId": "1opA8KE3HqBOGzRR0jAqc319qkVybKhc1m3GYfIXKjtw",
+  "benchmarkFrom": "2026-11",
+  "rows": {
+    "revenue": "Total Operating Revenue",
+    "expenses": "TOTAL CASH OUTFLOWS",
+    "fixed": "TOTAL FIXED COSTS",
+    "variable": "TOTAL VARIABLE COSTS",
+    "metaAds": "Meta Ads Costs",
+    "alcovians": "Total Number of Alcovians"
+  },
+  "months": {
+    "2026-10": { "revenue": 1645000, "expenses": 1571393, "fixed": 812519, "variable": 758874, "metaAds": 350000, "alcovians": 16 },
+    "2026-11": { "revenue": 5988580, "expenses": 1922473.67, "fixed": 948205.67, "variable": 974268, "metaAds": 246750, "alcovians": 22 },
+    "2026-12": { "revenue": 2169369.31, "expenses": 1802977, "fixed": 948205.67, "variable": 854771.33, "metaAds": 333112.5, "alcovians": 26 },
+    "2027-01": { "revenue": 2261599.52, "expenses": 2012464.71, "fixed": 978205.67, "variable": 1034259.04, "metaAds": 433873.86, "alcovians": 28 },
+    "2027-02": { "revenue": 4423444.88, "expenses": 2449781.81, "fixed": 1210559, "variable": 1239222.81, "metaAds": 452319.9, "alcovians": 34 },
+    "2027-03": { "revenue": 4653787.42, "expenses": 2682831.45, "fixed": 1458745.67, "variable": 1224085.78, "metaAds": 610631.87, "alcovians": 41 },
+    "2027-04": { "revenue": 4878864.29, "expenses": 3653469.96, "fixed": 1559995.67, "variable": 2093474.29, "metaAds": 824353.03, "alcovians": 48 },
+    "2027-05": { "revenue": 10809176.51, "expenses": 6559773.6, "fixed": 3573822.34, "variable": 2985951.27, "metaAds": 975772.86, "alcovians": 64 },
+    "2027-06": { "revenue": 17417486.17, "expenses": 8029756.13, "fixed": 4587648.94, "variable": 3442107.19, "metaAds": 1317293.36, "alcovians": 99 },
+    "2027-07": { "revenue": 17834514.75, "expenses": 9598814.28, "fixed": 5127355.61, "variable": 4471458.68, "metaAds": 1778346.03, "alcovians": 135 },
+    "2027-08": { "revenue": 25797959.69, "expenses": 12263995.97, "fixed": 5919808.88, "variable": 6344187.09, "metaAds": 2400767.15, "alcovians": 188 },
+    "2027-09": { "revenue": 29006746.11, "expenses": 12934527.32, "fixed": 6644075.48, "variable": 6290451.85, "metaAds": 3241035.65, "alcovians": 246 },
+    "2027-10": { "revenue": 39225090.74, "expenses": 16601205.21, "fixed": 7796528.75, "variable": 8804676.46, "metaAds": 4375398.13, "alcovians": 324 },
+    "2027-11": { "revenue": 47984637.79, "expenses": 21960702.54, "fixed": 8770648.68, "variable": 13190053.86, "metaAds": 5906787.47, "alcovians": 420 },
+    "2027-12": { "revenue": 49948342.79, "expenses": 23833889.78, "fixed": 10849475.28, "variable": 12984414.5, "metaAds": 7974163.08, "alcovians": 519 }
+  }
+}
