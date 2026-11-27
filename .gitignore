@@ -6,3 +6,4 @@ node_modules/
 .cache/
 tsconfig.tsbuildinfo
 next-env.d.ts
+dist/

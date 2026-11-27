@@ -21,10 +21,24 @@ npm run dev                  # http://localhost:3000
 npm test        # formula and mapping tests
 npm run sync    # pull Zoho once and print a summary
 npm run build && npm start   # production
+npm run export  # single HTML file, see below
 ```
 
 Deploy on any Node host (Vercel, Render). Set the variables from `.env.example` in the host's
 environment settings. `DASHBOARD_PASSWORD` is required in production; without it the app refuses to serve.
+
+## Single-file snapshot (no deployment)
+
+```bash
+npm run export
+```
+
+This pulls Zoho once and writes `dist/alcovia-finance-dashboard.html`: one file with the whole dashboard and the data inside it.
+Open it by double-clicking. It needs no server and no internet, and it contains no Zoho credentials.
+
+- The data is fixed at the moment of export. There is no Refresh button; run the command again for newer numbers.
+- The file holds every transaction, so anyone who has the file can read it. Share it the way you would share the books.
+- `dist/` is git-ignored so financial data is never pushed to GitHub.
 
 ## How it works
 
